@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: worldwire
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NEWSDATA_API_KEY
+        sync: false
+      - key: CACHE_TTL_SECONDS
+        value: "300"
